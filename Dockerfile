@@ -1,10 +1,10 @@
 FROM ubuntu:bionic
 
-COPY /install-bitcoincore.sh /root/
-RUN /bin/bash /root/install-bitcoincore.sh
+COPY /install-groestlcoincore.sh /root/
+RUN /bin/bash /root/install-groestlcoincore.sh
 
-EXPOSE 8332 8333
+EXPOSE 1441 1331
 
-COPY start-bitcoincore /root/
-RUN chmod +x /root/start-bitcoincore
-CMD ["/root/start-bitcoincore"]
+COPY start-groestlcoincore /root/
+RUN chmod +x /root/start-groestlcoincore
+CMD ["/root/start-groestlcoincore"]
